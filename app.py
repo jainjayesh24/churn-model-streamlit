@@ -3,10 +3,11 @@ import pandas as pd
 import pickle
 import numpy as np
 import tensorflow as tf
+from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler,OneHotEncoder,LabelEncoder
 
 #Trained Model
-model = tf.keras.models.load_model('model.h5')
+model = load_model('Upmodel.h5')
 
 #Encoders and Scalers
 with open('label2.pkl', 'rb') as f:
